@@ -30,9 +30,11 @@
     align-items: center;
     justify-content: center;
     transition: .4s;
+    svg{
+      margin-right: 16px;
+    }
     &:hover{
       filter: brightness(0.1);
-      
     }
   }
 }
