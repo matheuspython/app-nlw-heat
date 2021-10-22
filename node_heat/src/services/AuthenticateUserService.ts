@@ -32,13 +32,14 @@ class AuthenticateUserService {
         code,
       },
       headers: {
-        "Accept": "application/json"
+        Accept: "application/json"
       }
     })
-    const response = await axios.get<UIserResponse>("https://api.github.com/user", {
+    const response = await axios.get<UIserResponse>("https://api.github.com/user", 
+    {
       headers: {
-        authorization: `Bearer ${acessTokenResponse.access_token}`
-      }
+        authorization: `Bearer ${acessTokenResponse.access_token}`,
+      },
     })
     
     const { avatar_url,id,login,name } = response.data

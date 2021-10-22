@@ -38,7 +38,7 @@ export function AuthProvider(props: AuthProvider){
     const response = await api.post<AuthResponsne>('/authenticate', {
       code: githubCode
     })
-
+        
     const { token, user } = response.data;
 
     localStorage.setItem("@dowhile:token", token);
